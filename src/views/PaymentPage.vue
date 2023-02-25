@@ -1,7 +1,6 @@
 <template>
     <div id="payment-page">
       <header-comp/>
-      <payment-title/>
       <order-form/>
       <footer-comp/>
     </div>
@@ -10,7 +9,6 @@
   <script>
   import HeaderComp from '@/components/HeaderComp.vue'
   import FooterComp from '@/components/FooterComp.vue'
-  import PaymentTitle from '@/components/PaymentTitle.vue'
   import OrderForm from '@/components/OrderForm.vue'
 
   
@@ -19,7 +17,6 @@
       components: {
           HeaderComp,
           FooterComp,
-          PaymentTitle,
           OrderForm 
       }
   }

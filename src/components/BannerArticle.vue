@@ -6,7 +6,7 @@
         <div class="row article-content">
           <div class="col-lg-5">
             <img
-              src="../assets/bebek.png"
+            :src="'http://127.0.0.1:8000/storage/' + listbanner.gambar_banner"
               alt="banner-article"
               style="width: 100%"
             />
@@ -34,8 +34,47 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-    name: 'BannerArticle'
+    name: 'BannerArticle',
+
+      //siapkan variable penerima data dari web service atau data apapun yang ingin diwadahi
+  data() {
+    return {
+      //sesuaikan dengan data yang ingin dipassing
+      //sesuaikan tipe data untuk decalarenya
+      listbanner: [],
+      response: {},
+    };
+  },
+
+  methods: {
+    //fungsi untuk menjalankan hasil request web service
+    setData(dataAPI) {
+      //mengisikan nilai pada variabel list hotel
+      this.listbanner = dataAPI;
+    },
+
+    //Fungsi untuk request web services
+    async getDataBanner() {
+      try {
+        this.response = await axios.get(
+          "http://127.0.0.1:8000/api/list-banner/?position=Bottom"
+          );
+
+        //pangil function setData dan isikan hasil request web service ke dalam parameter dataAPI yang ada di function setData
+        this.setData(this.response.data.banner);
+        console.log(this.response.data.banner)
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+
+  // function yang ingin dijalankan saat halaman dirender
+  mounted() {
+    this.getDataBanner();
+  },
 }
 </script>
 

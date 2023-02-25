@@ -2,8 +2,8 @@
   <div id="LandingPage">
     <header-comp/>
     <hero-banner/>
-    <search-comp/>
-    <title-hotel-comp/>
+    <!-- <search-comp/>
+    <title-hotel-comp/> -->
     <hotel-list/>
     <title-city-comp/>
     <city-list/>
@@ -22,8 +22,8 @@ import CityList from '@/components/CityList.vue'
 import BannerArticle from '@/components/BannerArticle.vue'
 import BannerContent from '@/components/BannerContent.vue'
 import TitleCityComp from '@/components/TitleCityComp.vue'
-import TitleHotelComp from '@/components/TitleHotelComp.vue'
-import SearchComp from '@/components/SearchComp.vue'
+// import TitleHotelComp from '@/components/TitleHotelComp.vue'
+// import SearchComp from '@/components/SearchComp.vue'
 
 export default {
     name: 'LandingPage',
@@ -36,8 +36,8 @@ export default {
         BannerArticle,
         BannerContent,
         TitleCityComp,
-        TitleHotelComp,
-        SearchComp
+        // TitleHotelComp,
+        // SearchComp
     }
 }
 </script>
