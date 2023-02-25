@@ -24,12 +24,12 @@ const routes = [
     component: ListHotel
   },
   {
-    path: '/DetailHotel',
+    path: '/DetailHotel/:id',
     name: 'DetailHotel', // same like the name at view file
     component: DetailHotel
   },
   {
-    path: '/PaymentPage',
+    path: '/PaymentPage/:id',
     name: 'PaymentPage', // same like the name at view file
     component: PaymentPage
   },

@@ -1,7 +1,6 @@
 <template>
   <div id="DetailHotel">
     <header-comp/>
-    <detail-title/>
     <description-hotel/>
     <footer-comp/>
   </div>
@@ -10,7 +9,6 @@
 <script>
 import HeaderComp from '@/components/HeaderComp.vue'
 import FooterComp from '@/components/FooterComp.vue'
-import DetailTitle from '@/components/DetailTitle.vue'
 import DescriptionHotel from '@/components/DescriptionHotel.vue'
 
 export default {
@@ -18,7 +16,6 @@ export default {
     components: {
         HeaderComp,
         FooterComp,
-        DetailTitle,
         DescriptionHotel
     }
 }
